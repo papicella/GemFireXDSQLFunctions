@@ -1,0 +1,296 @@
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>GemFireXD Extended SQL Functions</title>
+</head>
+<body>
+<h1 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="text-align: left; "><span
+        id="sites-page-title"
+        dir="ltr">GemFireXD
+        Extended SQL Functions</span></h1>
+<h1> </h1>
+<a href="mailto:papicella@gopivotal.com">Created December 2014<br>
+</a><a href="mailto:papicella@vmware.com">Pas Apicella</a> - Pivotal Senior
+System Engineer <br>
+<br>
+GemFireXD SQL String functions extend the built in SQL functions with
+popular functions based on Oracle SQL Functions such as INITCAP, REPLACE,
+TRANSLATE, LPAD, RPAD which are not part of the built in functions provided
+out of the box with GemFireXD<br>
+<br>
+Example:<br>
+<br>
+<table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+       border="1"
+       cellpadding="2"
+       cellspacing="2">
+    <tbody>
+    <tr>
+        <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+            </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                    style="font-family: monospace;">sqlf&gt;
+              select initcap('PAS APICELLA') from sysibm.sysdummy1;<br>
+              1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <br>
+-----------------------------------------------------------------------------------------------------------<br>
+              Pas
+              Apicella&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br> <br>
+              1 row selected </span></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<div><b>Install Instructions</b></div>
+<div><br>
+    1. Download the following files<br>
+    <br>
+    <a href="https://www.google.com/url?q=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F15829935%2Ffe-demos%2FGemFireXD-SQLFunctions%2Fdownload%2Fcommons-lang3-3.1.jar&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzdVqFGR9afnHfsxxA8i34UnR8PZmw">commons-lang3-3.1.jar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br><a href="https://www.google.com/url?q=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F15829935%2Ffe-demos%2FGemFireXD-SQLFunctions%2Fdownload%2Fgemfirexd-sqlextended-functions.jar&amp;sa=D&amp;sntz=1&amp;usg=AFrqEze_-S4G0oOiDVKEgqQQyIS7EsPVqA">gemfirexd-sqlextended-functions.jar
+    </a><br><a href="https://www.google.com/url?q=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F15829935%2Ffe-demos%2FGemFireXD-SQLFunctions%2Fdownload%2Fgemfirexd-sqlextended-functions.sql&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzf_NxsEvZtibfTa3GQB8z6Sw2Smzw">gemfirexd-sqlextended-functions.sql</a>
+</div>
+<div><a href="https://www.google.com/url?q=https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F15829935%2Ffe-demos%2FGemFireXD-SQLFunctions%2Fdownload%2Ftest.sql&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzekKDGy1X466nmkk-8UCYStBOdfew">test.sql</a></div>
+<div><br>
+</div>
+<div>2. Place the following 2 jars into CLASSPATH for server nodes from
+    downloads in #1<br>
+    <ul>
+        <li>commons-lang3-3.1.jar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li>gemfirexd-sqlextended-functions.jar</li>
+    </ul>
+</div>
+<div>3. Run the following SQL in your target schema from the downloads in #1<br>
+    <ul>
+        <li>gemfirexd-sqlextended-functions.sql </li>
+        <li>test.sql</li>
+    </ul>
+</div>
+<div><b>Overview of SQL Functions</b></div>
+<br>
+<div><u>INITCAP</u><br>
+    <br>
+    INITCAP function sets the first character in each word to uppercase and
+    the rest to lowercase.</div>
+<div><i>Usage: INITCAP(input_string)<br>
+</i><i><br>
+</i>
+    <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+           border="1"
+           cellpadding="2"
+           cellspacing="2">
+        <tbody>
+        <tr>
+            <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                        style="font-family: monospace;">sqlf&gt;
+                select initcap('PAS APICELLA') from sysibm.sysdummy1;<br>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+-----------------------------------------------------------------------------------------------------------<br>
+                Pas
+                Apicella&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br> <br>
+                1 row selected </span></td>
+        </tr>
+        </tbody>
+    </table>
+    <i><br>
+    </i>
+    <div><u>REPLACE</u><br>
+        <br>
+        REPLACE function replaces a sequence of characters in a string with
+        another set of characters</div>
+    <div><i><br>
+        Usage: REPLACE( input_string, string_to_replace, replacement_string)</i></div>
+    <br>
+    <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+           border="1"
+           cellpadding="2"
+           cellspacing="2">
+        <tbody>
+        <tr>
+            <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                        style="font-family: monospace;">sqlf&gt;
+                select replace('aabbccaa', 'aa', 'zz') from sysibm.sysdummy1;<br>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>-------------------------------------------------------------------------------------------------------------<br>
+                zzbbcczz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br><br>
+                1 row selected</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div><u>REMOVE</u></div>
+    <div><br>
+        REMOVE function removes a sequence of characters in a string</div>
+    <div><i><br>
+        Usage: REMOVE (input_string, string_to_remove)</i></div>
+    <br>
+    <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+           border="1"
+           cellpadding="2"
+           cellspacing="2">
+        <tbody>
+        <tr>
+            <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                        style="font-family: monospace;">sqlf&gt;
+                select replace('aabbccaa', 'aa', 'zz') from sysibm.sysdummy1;<br>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+-------------------------------------------------------------------------------------------------------------<br>
+                zzbbcczz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br> <br>
+                1 row selected</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div><u>GFXD_TRANSLATE</u></div>
+    <div><br>
+        Note: This function is called GPXF_TRANSLATE as TRANSLATE is a reserved
+        word in Derby<br>
+        <br>
+        GFXD_TRANSLATE function replaces a sequence of characters in a string
+        with another set of characters. However, it replaces a single character
+        at a time. For example, it will replace the 1st character in the <i>string_to_replace</i>
+        with the 1st character in the <i>replacement_string</i>. Then it will
+        replace the 2nd character in the <i>string_to_replace</i> with the 2nd
+        character in the <i>replacement_string</i>, and so on.</div>
+    <div><i><br>
+        Usage: GFXD_TRANSLATE( input_string, string_to_replace,
+        replacement_string )<br>
+    </i><br>
+        <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+               border="1"
+               cellpadding="2"
+               cellspacing="2">
+            <tbody>
+            <tr>
+                <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                    </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                            style="font-family: monospace;">sqlf&gt;
+                  select gfxd_translate('222tech', '2ec', '3it') from
+                  sysibm.sysdummy1;<br>
+                  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <br>
+-----------------------------------------------------------------------------------------------------------------<br>
+                  333tith&nbsp; <br>
+                  <br>
+                  1 row selected </span></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <div><u>LPAD</u><br>
+            <br>
+            LPAD function pads the left-side of a string with a specific set of
+            characters</div>
+        <div><i><br>
+            Usage: LPAD( input_string, padded_length, pad_string)<br>
+        </i><i><br>
+        </i>
+            <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+                   border="1"
+                   cellpadding="2"
+                   cellspacing="2">
+                <tbody>
+                <tr>
+                    <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                        </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                                style="font-family: monospace;">sqlf&gt;
+                    select lpad('pas', 5, '') from sysibm.sysdummy1;<br>
+                    1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <br>
+------------------------------------------------------------------------------------------------------------------<br>
+                    &nbsp;
+                    pas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <br> <br>
+                    1 row selected</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <i><br>
+            </i><u>RPAD</u><br>
+            <br>
+            RPAD function pads the right-side of a string with a specific set of
+            characters<br>
+            <br>
+            <div><i>Usage:&nbsp; </i><i>RPAD( input_string, padded_length,
+                pad_string)<br>
+                <br>
+            </i></div>
+        </div>
+        <table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+               border="1"
+               cellpadding="2"
+               cellspacing="2">
+            <tbody>
+            <tr>
+                <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+                    </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                            style="font-family: monospace;">sqlf&gt;
+                  select rpad('pas', 5, '.') from sysibm.sysdummy1;<br>
+                  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <br>
+-------------------------------------------------------------------------------------------------------------------<br>
+                  pas..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <br> <br>
+                  1 row selected</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<u>INSTR</u><br>
+<br>
+INSTR function returns the location of a substring in a string<br>
+<br>
+<div><i>Usage:&nbsp; </i><i>INSTR( string, substring, start_position,
+    nth_appearance)</i></div>
+<i><br>
+</i>
+<table style="text-align: left; width: 100%; background-color: rgb(204, 255, 255);"
+       border="1"
+       cellpadding="2"
+       cellspacing="2">
+    <tbody>
+    <tr>
+        <td><span style="font-family: monospace;"></span><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><spanstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><brstyle="font-family:monospace;"=""><spanstyle="font-family:
+                                                                  monospace;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"=""><spanstyle="font-weight:bold;"=""><spanstyle="font-weight:style="font-family:monospace;"bold;"="">
+            </spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-weight:bold;"=""></spanstyle="font-weight:style="font-family:monospace;"bold;"=""></spanstyle="font-family:></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></brstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""></spanstyle="font-family:monospace;"=""><span
+                    style="font-family: monospace;">sqlf&gt;
+              select instr('Tech on the net', 'e', 1, 2) from sysibm.sysdummy1;<br>
+              1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+              -----------<br>
+              11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+              <br>
+              1 row selected<br>
+            </span></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<hr style="color: black;"><br>
+<strong>Pas Apicella</strong> [papicella at gopivotal.com] is a Senior
+Systems Engineer at Pivotal Inc<br>
+</body>
+</html>
